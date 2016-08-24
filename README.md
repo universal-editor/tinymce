@@ -7,11 +7,15 @@
 Данное расширение подтягивается как bower зависимость. Для подключения расширения в проект требуется выполнить
 следующую команду, находясь в корневой директории проекта:
 
-* bower install https://github.com/universal-editor/tinymce-plugin --save -F
+* bower install https://github.com/universal-editor/tinymce-plugin.git --save -F
 * требуется произвести подлкючение javascript - файла, css файла:
   * tinymce-plugin.min.js - основной файл расширения у-редактора.
   * tinymce-plugin.min.css - файл стилей расширения у-редактора.
 * само расширение использует библиотеку tinymce-dist, для которой требуются файлы находщисеся в каталоге mce-files
+
+Примечание:
+
+Каталог mce-files, в проекте где подулючается расширение, должен находиться в tinymce-plugin/mce-files.
 
 Подключение модуля:
 ```javascript
