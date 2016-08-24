@@ -1,0 +1,29 @@
+{
+  "name": "tinymce-plugin",
+  "main": [
+    "./dist/tinymce-plugin.min.js",
+    "./dist/tinymce-plugin.min.css"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "editor"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.x",
+    "tinymce-dist": "4.3.12",
+    "angular-ui-tinymce": "~0.0.10"
+  },
+  "resolutions": {
+    "angular": "~1.5.7"
+  }
+}
+
