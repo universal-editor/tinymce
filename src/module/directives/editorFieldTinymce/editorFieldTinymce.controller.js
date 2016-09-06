@@ -5,9 +5,9 @@
         .module('tinymce.plugin')
         .controller('EditorFieldTinymceController',EditorFieldTinymceController);
 
-    EditorFieldTinymceController.$inject = ['$scope','EditEntityStorage','ArrayFieldStorage'];
+    EditorFieldTinymceController.$inject = ['$rootScope', '$scope','EditEntityStorage','ArrayFieldStorage'];
 
-    function EditorFieldTinymceController($scope,EditEntityStorage,ArrayFieldStorage){
+    function EditorFieldTinymceController($rootScope, $scope,EditEntityStorage,ArrayFieldStorage){
         /* jshint validthis: true */
         var vm = this;
         var fieldErrorName;
@@ -37,7 +37,18 @@
                 readonly: vm.readonly
             };
         }
+
+        vm.wysiwygOptions.setup = function (editor) {
+            editor.on("init", function () {
+            
+            });
+        };
+
+        $scope.$on('editor:tinymce_extended', function (event, data) {
+            angular.extend(vm.wysiwygOptions, data);
+        });
         
+
         $scope.$parent.vm.error = [];
         vm.parentFieldIndex = $scope.parentFieldIndex || false;
 
