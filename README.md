@@ -9,8 +9,8 @@ the following commands when you located in the root directory of the project:
 
 * Bower install https://github.com/universal-editor/tinymce-plugin --save -F
 * Required to make connecting javascript-file, css-file:
-  * Tinymce-plugin.min.js - the main extension file in editor.
-  * Tinymce-plugin.min.css - file extension styles in editor.
+  * tinymce-plugin.min.js – the main extension file in editor.
+  * tinymce-plugin.min.css – file extension styles in editor.
 * Extension uses tinymce-dist library that requires files are in mce-files directory
 
 Connection module:
@@ -26,8 +26,8 @@ extension connected via bower, then he will download the necessary libraries.
 Notes:
 
 For building the project, which connects the extension, should use a gulp plugins:
-* Main-bower-files - gathers all the paths to the libraries referred to in bower.json;
-* Gulp-inject - can connect js and css in the project in the specified location.
+* Main-bower-files – gathers all the paths to the libraries referred to in bower.json;
+* Gulp-inject – can connect js and css in the project in the specified location.
 
 ## Documentation
 
