@@ -30,4 +30,4 @@
 
 ## Документация
 
-* [Поле tinymce](docs/ru/tinymce.md)
+* [Поле tinymce](tinymce.md)

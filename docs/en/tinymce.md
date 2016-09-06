@@ -3,7 +3,7 @@
 Is like the field [Textarea] (textarea.md), but for the editing is used
 MCE Editor WYSIWYG.
 
-`` `Json
+```json
 {
     "Name": "html_text",
     "Label": "Rich Text"
@@ -29,7 +29,7 @@ MCE Editor WYSIWYG.
         "Toolbar2": "forecolor backcolor emoticons | link image"
      }
 }
-`` `
+```
 
 ## Options
 
