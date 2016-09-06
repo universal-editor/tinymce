@@ -34,11 +34,10 @@
                 plugins: 'advlist autolink link lists charmap',
                 skin: 'lightgray',
                 theme: 'modern',
-                readonly: vm.readonly,
+                readonly: vm.readonly
             };
         }
-       
-
+        
         $scope.$parent.vm.error = [];
         vm.parentFieldIndex = $scope.parentFieldIndex || false;
 
