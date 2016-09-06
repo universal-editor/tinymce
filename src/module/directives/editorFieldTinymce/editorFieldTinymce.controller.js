@@ -37,13 +37,6 @@
                 readonly: vm.readonly
             };
         }
-
-        vm.wysiwygOptions.setup = function (editor) {
-            editor.on("init", function () {
-            
-            });
-        };
-
         $scope.$on('editor:tinymce_extended', function (event, data) {
             angular.extend(vm.wysiwygOptions, data);
         });
