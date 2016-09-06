@@ -7,6 +7,7 @@ Directive to "Universal Editor" editor which extends the possibility of adding a
 This extension is pulled like a bower dependence. For connecting the extension required to execute
 the following commands when you located in the root directory of the project:
 
+
 * Bower install https://github.com/universal-editor/tinymce-plugin --save -F
 * Required to make connecting javascript-file, css-file:
   * tinymce-plugin.min.js – the main extension file in editor.
