@@ -25,19 +25,22 @@
         vm.fieldName = $scope.field.name;
         vm.readonly = $scope.field.readonly || false;
         vm.fieldValue = "";
-        vm.wysiwygOptions = {
-            menubar : false,
-            plugins : 'advlist autolink link lists charmap',
-            skin: 'lightgray',
-            theme : 'modern',
-            readonly : vm.readonly,
-        };
+        if ($scope.field['tinymce-init']) {
+            vm.wysiwygOptions = $scope.field['tinymce-init'];
+            vm.wysiwygOptions.readonly = vm.readonly;
+        } else {
+            vm.wysiwygOptions = {
+                menubar: $scope.field.menubar || true,
+                plugins: 'advlist autolink link lists charmap',
+                skin: 'lightgray',
+                theme: 'modern',
+                readonly: vm.readonly,
+            };
+        }
+       
+
         $scope.$parent.vm.error = [];
         vm.parentFieldIndex = $scope.parentFieldIndex || false;
-
-        if(vm.readonly){
-            vm.wysiwygOptions.toolbar = false;
-        }
 
         if ($scope.field.hasOwnProperty("multiple") && $scope.field.multiple === true){
             vm.multiple = true;

@@ -30,7 +30,7 @@ gulp.task('js', function () {
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('jshint-stylish'))
         .pipe(plugins.concat("tinymce-plugin.js"))
-        .pipe(plugins.rename({
+       .pipe(plugins.rename({
             suffix: '.min'
         }))
         .pipe(plugins.uglify())
