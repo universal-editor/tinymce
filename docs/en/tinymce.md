@@ -26,7 +26,8 @@ MCE Editor WYSIWYG.
             "insertdatetime nonbreaking save table contextmenu textcolor"
         ],
         "toolbar1": "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
-        "toolbar2": "forecolor backcolor emoticons | link image"
+        "toolbar2": "forecolor backcolor emoticons | link image",
+        "language": "ru"
      }
 }
 ```
