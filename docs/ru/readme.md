@@ -14,6 +14,7 @@
 * само расширение использует библиотеку tinymce-dist, для которой требуются файлы находщиеся в каталоге mce-files
 
 Подключение модуля:
+
 ```javascript
     angular.module('unEditor',['tinymce.plugin']);
 ```

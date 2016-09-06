@@ -14,9 +14,10 @@ the following commands when you located in the root directory of the project:
 * Extension uses tinymce-dist library that requires files are in mce-files directory
 
 Connection module:
-`` `Javascript
+
+```javascript
     angular.module ( 'unEditor', [ 'tinymce.plugin']);
-`` `
+```
 
 For correct operation of the extensions editor requires a set of additional libraries that extend the functionality of AngularJS.
 A current list of libraries and their version is available in bower.json of the file repository ("section" dependencies). If
