@@ -5,9 +5,9 @@
         .module('tinymce.plugin')
         .controller('EditorFieldTinymceController',EditorFieldTinymceController);
 
-    EditorFieldTinymceController.$inject = ['$scope','EditEntityStorage','ArrayFieldStorage'];
+    EditorFieldTinymceController.$inject = ['$rootScope', '$scope','EditEntityStorage','ArrayFieldStorage'];
 
-    function EditorFieldTinymceController($scope,EditEntityStorage,ArrayFieldStorage){
+    function EditorFieldTinymceController($rootScope, $scope,EditEntityStorage,ArrayFieldStorage){
         /* jshint validthis: true */
         var vm = this;
         var fieldErrorName;
@@ -25,19 +25,25 @@
         vm.fieldName = $scope.field.name;
         vm.readonly = $scope.field.readonly || false;
         vm.fieldValue = "";
-        vm.wysiwygOptions = {
-            menubar : false,
-            plugins : 'advlist autolink link lists charmap',
-            skin: 'lightgray',
-            theme : 'modern',
-            readonly : vm.readonly,
-        };
+        if ($scope.field['tinymce-init']) {
+            vm.wysiwygOptions = $scope.field['tinymce-init'];
+            vm.wysiwygOptions.readonly = vm.readonly;
+        } else {
+            vm.wysiwygOptions = {
+                menubar: $scope.field.menubar || true,
+                plugins: 'advlist autolink link lists charmap',
+                skin: 'lightgray',
+                theme: 'modern',
+                readonly: vm.readonly
+            };
+        }
+        $scope.$on('editor:tinymce_extended', function (event, data) {
+            angular.extend(vm.wysiwygOptions, data);
+        });
+        
+
         $scope.$parent.vm.error = [];
         vm.parentFieldIndex = $scope.parentFieldIndex || false;
-
-        if(vm.readonly){
-            vm.wysiwygOptions.toolbar = false;
-        }
 
         if ($scope.field.hasOwnProperty("multiple") && $scope.field.multiple === true){
             vm.multiple = true;

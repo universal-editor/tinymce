@@ -1,37 +1,43 @@
-# Расширение для «Универсального редактора»
+# Extension for "Universal Editor"
 
-Директива к «Универсальному редактору» котрорая расширяет возможности рендактора, добавляя поле wysiwyg.
+Directive to "Universal Editor" editor which extends the possibility of adding a field **tinymce**.
 
-## Установка расширения
+## Installing extensions
 
-Данное расширение подтягивается как bower зависимость. Для подключения расширения в проект требуется выполнить
-следующую команду, находясь в корневой директории проекта:
+This extension is pulled like a bower dependence. For connecting the extension required to execute
+the following commands when you located in the root directory of the project:
 
-* bower install https://github.com/universal-editor/tinymce-plugin.git --save -F
-* требуется произвести подлкючение javascript - файла, css файла:
-  * tinymce-plugin.min.js - основной файл расширения у-редактора.
-  * tinymce-plugin.min.css - файл стилей расширения у-редактора.
-* само расширение использует библиотеку tinymce-dist, для которой требуются файлы находщисеся в каталоге mce-files
 
-Примечание:
+* Bower install https://github.com/universal-editor/tinymce-plugin --save -F
+* Required to make connecting javascript-file, css-file:
+  * tinymce-plugin.min.js – the main extension file in editor.
+  * tinymce-plugin.min.css – file extension styles in editor.
+* Extension uses tinymce-dist library that requires files are in mce-files directory
 
-Каталог mce-files, в проекте где подулючается расширение, должен находиться в tinymce-plugin/mce-files.
+Firstly static resources of dist/mce-files directory files needed to move to a working directory and specify the path for MCE:
 
-Подключение модуля:
 ```javascript
-    angular.module('unEditor',['tinymce.plugin']);
+   tinyMCE.baseURL = '/tinymce-plugin/files';
 ```
 
-Для корректной работы расширения у-редактора требуется набор дополнительных библиотек, расширяющих функционал AngularJS.
-Актуальный список библиотек и их версий доступены в файле bower.json данного репозитория в "разделе" dependencies. Если
-расширение подключать через bower, то он сам скачает нужные библиотеки.
+Connection module:
 
-Пояснение:
+```javascript
+    angular.module ( 'unEditor', [ 'tinymce.plugin']);
+```
 
-Желательно при сборке проекта, в котором подключается данное расширение, использовать gulp плагины :
-* main-bower-files - собирает пути для всех библиотек указанных в bower.json
-* gulp-inject - может подключать js и css в проект в указанном месте
+For correct operation of the extensions editor requires a set of additional libraries that extend the functionality of AngularJS.
+A current list of libraries and their version is available in bower.json of the file repository ("section" dependencies). If
+extension connected via bower, then he will download the necessary libraries.
 
-## Документация
+Notes:
 
-* [Поле tinymce](docs/tinymce.md)
+For building the project, which connects the extension, should use a gulp plugins:
+* Main-bower-files – gathers all the paths to the libraries referred to in bower.json;
+* Gulp-inject – can connect js and css in the project in the specified location.
+
+## Documentation
+
+Types of field
+
+* [tinymce](docs/en/tinymce.md)
