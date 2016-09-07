@@ -14,6 +14,12 @@ the following commands when you located in the root directory of the project:
   * tinymce-plugin.min.css – file extension styles in editor.
 * Extension uses tinymce-dist library that requires files are in mce-files directory
 
+Firstly static resources of dist/mce-files directory files needed to move to a working directory and specify the path for MCE:
+
+```javascript
+   tinyMCE.baseURL = 'your_paths/mce-files';
+```
+
 Connection module:
 
 ```javascript
