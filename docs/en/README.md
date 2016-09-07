@@ -1,7 +1,6 @@
 # Tinymce
 
-Is like the field [textarea] (https://github.com/universal-editor/universal-editor/blob/master/docs/en/fields/textarea.md), but for the editing is used
-MCE Editor WYSIWYG.
+Is like the field textarea, but for the editing is used MCE Editor WYSIWYG.
 
 ```json
 {
@@ -42,7 +41,7 @@ MCE Editor WYSIWYG.
 * **expandable**: if you want to ask for the additional field at the backend. If it is determined that a request for entity will be made in the format:
 
 ```
-/rest/v1/news?Expand = html_text
+/rest/v1/news?expand=html_text
 ```
 
 * **multiple**: setting is responsible for the designation of the field to take the possibility of multiple values.
