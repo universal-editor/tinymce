@@ -40,4 +40,4 @@ For building the project, which connects the extension, should use a gulp plugin
 
 Types of field
 
-* [tinymce](docs/en/tinymce.md)
+* [tinymce](docs/en/README.md)
