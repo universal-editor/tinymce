@@ -6,6 +6,6 @@
         'tinymce.plugin.templates',
         'ui.tinymce'
     ]).config(function() {
-        tinyMCE.baseURL = '../tinymce-plugin/mce-files';
+        tinyMCE.baseURL = '/tinymce-plugin/files';
     });
 })();
