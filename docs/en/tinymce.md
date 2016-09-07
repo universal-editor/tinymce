@@ -63,8 +63,8 @@ In the key **plugins** stored list of plugins for mce. They are stored in the di
 
 To install a new plug-in to use the rule:
 
-code of the plugin is located at /mce-files/plugins/**plagin_name**/plugin.min.js,
-where **plagin_name** - name of the plugin that you want to register in **plugins** parameter, separated by a space.
+code of the plugin is located at /mce-files/plugins/**plugin_name**/plugin.min.js,
+where **plugin_name** - name of the plugin that you want to register in **plugins** parameter, separated by a space.
 
-In **toolbarN** (where N - number of panels, if you count from the top) lists the specific components of a plug,
+In **toolbarN** (where N - number of panels, if you count from the top) lists the specific components of a plugin,
 placed on the editor panel.

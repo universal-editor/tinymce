@@ -17,7 +17,7 @@ the following commands when you located in the root directory of the project:
 Firstly static resources of dist/mce-files directory files needed to move to a working directory and specify the path for MCE:
 
 ```javascript
-   tinyMCE.baseURL = 'your_paths/mce-files';
+   tinyMCE.baseURL = '/tinymce-plugin/files';
 ```
 
 Connection module:
@@ -41,5 +41,3 @@ For building the project, which connects the extension, should use a gulp plugin
 Types of field
 
 * [tinymce](docs/en/tinymce.md)
-
-[Russian documenation](docs/ru/readme.md)
