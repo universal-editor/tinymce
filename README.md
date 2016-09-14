@@ -8,7 +8,7 @@ This extension is pulled like a bower dependence. For connecting the extension r
 the following commands when you located in the root directory of the project:
 
 
-* Bower install https://github.com/universal-editor/tinymce-plugin --save -F
+* Bower install https://github.com/universal-editor/tinymce --save -F
 * Required to make connecting javascript-file, css-file:
   * universal-editor.TinyMCE.min.js – the main extension file in editor.
   * universal-editor.TinyMCE.min.css – file extension styles in editor.
