@@ -1,8 +1,8 @@
 (function(module) {
 try {
-  module = angular.module('tinymce.plugin.templates');
+  module = angular.module('universalEditor.TinyMCE.templates');
 } catch (e) {
-  module = angular.module('tinymce.plugin.templates', []);
+  module = angular.module('universalEditor.TinyMCE.templates', []);
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('module/directives/editorFieldTinymce/editorFieldTinymce.html',

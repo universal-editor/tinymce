@@ -10,8 +10,8 @@ the following commands when you located in the root directory of the project:
 
 * Bower install https://github.com/universal-editor/tinymce-plugin --save -F
 * Required to make connecting javascript-file, css-file:
-  * tinymce-plugin.min.js – the main extension file in editor.
-  * tinymce-plugin.min.css – file extension styles in editor.
+  * universal-editor.TinyMCE.min.js – the main extension file in editor.
+  * universal-editor.TinyMCE.min.css – file extension styles in editor.
 * Extension uses tinymce-dist library that requires files are in mce-files directory
 
 Firstly static resources of dist/mce-files directory files needed to move to a working directory and specify the path for MCE:
@@ -23,7 +23,7 @@ Firstly static resources of dist/mce-files directory files needed to move to a w
 Connection module:
 
 ```javascript
-    angular.module ( 'unEditor', [ 'tinymce.plugin']);
+    angular.module ( 'unEditor', [ 'universalEditor.TinyMCE']);
 ```
 
 For correct operation of the extensions editor requires a set of additional libraries that extend the functionality of AngularJS.

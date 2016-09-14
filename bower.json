@@ -1,8 +1,8 @@
 {
-  "name": "tinymce-plugin",
+  "name": "universal-editor.TinyMCE",
   "main": [
-    "./dist/tinymce-plugin.min.js",
-    "./dist/tinymce-plugin.min.css"
+    "./dist/universal-editor.TinyMCE.min.js",
+    "./dist/universal-editor.TinyMCE.min.css"
   ],
   "moduleType": [],
   "keywords": [
