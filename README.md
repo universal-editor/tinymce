@@ -23,7 +23,7 @@ Firstly static resources of dist/mce-files directory files needed to move to a w
 Connection module:
 
 ```javascript
-    angular.module ('myApp', ['universalEditor.TinyMCE']);
+    angular.module('myApp', ['universalEditor.TinyMCE']);
 ```
 
 For correct operation of the extensions editor requires a set of additional libraries that extend the functionality of AngularJS.
