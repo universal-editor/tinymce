@@ -6,6 +6,6 @@
         'universalEditor.TinyMCE.templates',
         'ui.tinymce'
     ]).config(function() {
-        tinyMCE.baseURL = '/tinymce-plugin/files';
+        tinyMCE.baseURL = '/assets/universal-editor/tinymce';
     });
 })();
