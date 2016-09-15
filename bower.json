@@ -1,8 +1,7 @@
 {
   "name": "tinymce-plugin",
   "main": [
-    "./dist/tinymce-plugin.min.js",
-    "./dist/tinymce-plugin.min.css"
+    "./dist/tinymce-plugin.min.js"
   ],
   "moduleType": [],
   "keywords": [
