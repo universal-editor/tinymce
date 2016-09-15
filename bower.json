@@ -1,5 +1,5 @@
 {
-  "name": "tinymce-plugin",
+  "name": "universal-editor.TinyMCE",
   "main": [
     "./dist/tinymce-plugin.min.js"
   ],

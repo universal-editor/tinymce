@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('tinymce.plugin')
+        .module('universalEditor.TinyMCE')
         .controller('EditorFieldTinymceController',EditorFieldTinymceController);
 
     EditorFieldTinymceController.$inject = ['$rootScope', '$scope','EditEntityStorage','ArrayFieldStorage'];

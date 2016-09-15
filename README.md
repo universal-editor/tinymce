@@ -8,7 +8,7 @@ This extension is pulled like a bower dependence. For connecting the extension r
 the following commands when you located in the root directory of the project:
 
 
-* Bower install https://github.com/universal-editor/tinymce-plugin --save -F
+* Bower install https://github.com/universal-editor/tinymce --save -F
 * Required to make connecting javascript-file, css-file:
   * tinymce-plugin.min.js – the main extension file in editor.
 * Extension uses tinymce-dist library that requires files are in mce-files directory
@@ -24,7 +24,7 @@ tinyMCE.baseURL parameter is may be changed if required.
 Connection module:
 
 ```javascript
-    angular.module ( 'unEditor', [ 'tinymce.plugin']);
+    angular.module('myApp', ['universalEditor.TinyMCE']);
 ```
 
 For correct operation of the extensions editor requires a set of additional libraries that extend the functionality of AngularJS.
@@ -41,4 +41,4 @@ For building the project, which connects the extension, should use a gulp plugin
 
 Types of field
 
-* [tinymce](docs/en/tinymce.md)
+* [tinymce](docs/en/README.md)

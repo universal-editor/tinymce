@@ -1,5 +1,5 @@
 {
-  "name": "tinymce-plugin",
+  "name": "universal-editor.TinyMCE",
   "repository": {
     "type": "git",
     "url": "https://github.com/universal-editor/tinymce-plugin"
