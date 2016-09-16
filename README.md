@@ -39,6 +39,5 @@ For building the project, which connects the extension, should use a gulp plugin
 
 ## Documentation
 
-Types of field
-
-* [tinymce](docs/en/README.md)
+* [English](docs/en/README.md)
+* [Русский](docs/ru/README.md)
