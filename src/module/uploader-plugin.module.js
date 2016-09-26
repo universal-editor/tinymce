@@ -1,11 +1,11 @@
 (function () {
     'use strict';
     angular
-    .module('tinymce.plugin',
+    .module('universalEditor.TinyMCE',
     [
-        'tinymce.plugin.templates',
+        'universalEditor.TinyMCE.templates',
         'ui.tinymce'
     ]).config(function() {
-        tinyMCE.baseURL = '/tinymce-plugin/files';
+        tinyMCE.baseURL = '/assets/universal-editor/tinymce';
     });
 })();

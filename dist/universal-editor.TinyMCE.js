@@ -1,19 +1,19 @@
 (function () {
     'use strict';
     angular
-    .module('tinymce.plugin',
+    .module('universalEditor.TinyMCE',
     [
-        'tinymce.plugin.templates',
+        'universalEditor.TinyMCE.templates',
         'ui.tinymce'
     ]).config(function() {
-        tinyMCE.baseURL = '/tinymce-plugin/files';
+        tinyMCE.baseURL = '/assets/universal-editor/tinymce';
     });
 })();
 (function () {
     'use strict';
 
     angular
-        .module('tinymce.plugin')
+        .module('universalEditor.TinyMCE')
         .controller('EditorFieldTinymceController',EditorFieldTinymceController);
 
     EditorFieldTinymceController.$inject = ['$rootScope', '$scope','EditEntityStorage','ArrayFieldStorage'];
@@ -227,7 +227,7 @@
     'use strict';
 
     angular
-        .module('tinymce.plugin')
+        .module('universalEditor.TinyMCE')
         .directive('editorFieldTinymce',editorFieldTinymce);
 
     editorFieldTinymce.$inject = ['$templateCache'];
@@ -252,9 +252,9 @@
 })();
 (function(module) {
 try {
-  module = angular.module('tinymce.plugin.templates');
+  module = angular.module('universalEditor.TinyMCE.templates');
 } catch (e) {
-  module = angular.module('tinymce.plugin.templates', []);
+  module = angular.module('universalEditor.TinyMCE.templates', []);
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('module/directives/editorFieldTinymce/editorFieldTinymce.html',

@@ -17,7 +17,7 @@ gulp.task('jade', function () {
 gulp.task('html2js', function () {
     return gulp.src(['./src/**/*.html','!./src/index.html','!./src/mce-files/**/*.html','!./src/mce-files/*.html'])
         .pipe(plugins.ngHtml2js({
-            moduleName: "tinymce.plugin.templates"
+            moduleName: "universalEditor.TinyMCE.templates"
         }))
         .pipe(plugins.rename({
             suffix: '.tpl'
@@ -29,7 +29,7 @@ gulp.task('js', function () {
     var module = gulp.src(['./src/module/tinymce-plugin.module.js','./src/*.js','./src/**/*.js','!./src/mce-files/**/*.js'])
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('jshint-stylish'))
-        .pipe(plugins.concat("tinymce-plugin.js"))
+        .pipe(plugins.concat("universal-editor.TinyMCE.js"))
         .pipe(gulp.dest('./dist'))
        .pipe(plugins.rename({
             suffix: '.min'
@@ -40,8 +40,8 @@ gulp.task('js', function () {
 
 gulp.task('css', function () {
     return gulp.src(['./src/*.scss','./src/**/*.scss'])
-        .pipe(plugins.sass())
-        .pipe(plugins.concat("tinymce-plugin.css"))
+        .pipe(plugins.sass())        
+        .pipe(plugins.concat("universal-editor.TinyMCE.css"))
         .pipe(gulp.dest('./dist'))
         .pipe(plugins.uglifycss({
             maxLineLen : 80

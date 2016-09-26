@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('tinymce.plugin')
+        .module('universalEditor.TinyMCE')
         .directive('editorFieldTinymce',editorFieldTinymce);
 
     editorFieldTinymce.$inject = ['$templateCache'];
