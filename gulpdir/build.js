@@ -30,6 +30,7 @@ gulp.task('js', function () {
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('jshint-stylish'))
         .pipe(plugins.concat("universal-editor.TinyMCE.js"))
+        .pipe(gulp.dest('./dist'))
        .pipe(plugins.rename({
             suffix: '.min'
         }))
@@ -39,8 +40,9 @@ gulp.task('js', function () {
 
 gulp.task('css', function () {
     return gulp.src(['./src/*.scss','./src/**/*.scss'])
-        .pipe(plugins.sass())
+        .pipe(plugins.sass())        
         .pipe(plugins.concat("universal-editor.TinyMCE.css"))
+        .pipe(gulp.dest('./dist'))
         .pipe(plugins.uglifycss({
             maxLineLen : 80
         }))
