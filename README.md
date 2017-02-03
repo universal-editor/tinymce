@@ -10,7 +10,7 @@ the following commands when you located in the root directory of the project:
 
 * Bower install https://github.com/universal-editor/tinymce --save -F
 * Required to make connecting javascript-file, css-file:
-  * tinymce-plugin.min.js – the main extension file in editor.
+  * universal-editor.TinyMCE.min.js – the main extension file in editor.
 * Extension uses tinymce-dist library that requires files are in mce-files directory
 
 Firstly static resources of dist/mce-files directory files needed to move to a working directory and by default specify the path for MCE:
@@ -31,11 +31,24 @@ For correct operation of the extensions editor requires a set of additional libr
 A current list of libraries and their version is available in bower.json of the file repository ("section" dependencies). If
 extension connected via bower, then he will download the necessary libraries.
 
-Notes:
+## Building
 
-For building the project, which connects the extension, should use a gulp plugins:
-* Main-bower-files – gathers all the paths to the libraries referred to in bower.json;
-* Gulp-inject – can connect js and css in the project in the specified location.
+Recommendation: running console with Administrator permissions. Address http://universal-editor.dev is including into host file and open in browser.
+If don't running console this way, have to enter http://universal-editor.tinymce.dev in host file manually as new line like this
+
+127.0.0.1 universal-editor.tinymce.dev
+
+
+Install dependences:
+
+1. `npm install`
+1. `bower install`
+
+Run build:
+
+* `npm run dev`: build and watch sources, create web server. 
+* `npm run dist`: create web server from './dist' directory.
+* `npm run build`: build to `./dist` directory.
 
 ## Documentation
 
