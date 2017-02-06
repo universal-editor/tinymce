@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('demoApp', ['ui.router', 'universalEditor.TinyMCE']);
+    angular.module('demoApp', ['ui.router','universal.editor', 'universalEditor.TinyMCE']);
 
 
     angular

@@ -1,6 +1,6 @@
 # Extension for "Universal Editor"
 
-Directive to "Universal Editor" editor which extends the possibility of adding a field **tinymce**.
+Directive to "Universal Editor" editor which extends the possibility of adding a component **ue-tinymce**.
 
 ## Installing extensions
 
@@ -9,9 +9,9 @@ the following commands when you located in the root directory of the project:
 
 
 * Bower install https://github.com/universal-editor/tinymce --save -F
-* Required to make connecting javascript-file, css-file:
+* Required to make connecting javascript-file:
   * universal-editor.TinyMCE.min.js – the main extension file in editor.
-* Extension uses tinymce-dist library that requires files are in mce-files directory
+* Extension uses tinymce-dist library that requires files are in mce-files directory.
 
 Firstly static resources of dist/mce-files directory files needed to move to a working directory and by default specify the path for MCE:
 
@@ -24,7 +24,7 @@ tinyMCE.baseURL parameter is may be changed if required.
 Connection module:
 
 ```javascript
-    angular.module('myApp', ['universalEditor.TinyMCE']);
+    angular.module('myApp', ['universal.editor', 'universalEditor.TinyMCE']);
 ```
 
 For correct operation of the extensions editor requires a set of additional libraries that extend the functionality of AngularJS.

@@ -1,6 +1,6 @@
 # Tinymce
 
-Is like the field textarea, but for the editing is used MCE Editor WYSIWYG.
+Is like the field textarea, but for the editing is used MCE Editor WYSIWYG (https://www.tinymce.com/).
 
 ```json
 {

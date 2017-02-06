@@ -5,7 +5,6 @@
     angular
         .module('universalEditor.TinyMCE',
         [
-            'universal.editor',
             'universalEditor.TinyMCE.templates',
             'ui.tinymce'
         ]).config(function() {
