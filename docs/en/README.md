@@ -1,6 +1,6 @@
 # Tinymce
 
-Is like the field textarea, but for the editing is used MCE Editor WYSIWYG (https://www.tinymce.com/).
+Is like the textarea, but for the editing is used MCE Editor WYSIWYG (https://www.tinymce.com/).
 
 ```json
 {
@@ -15,7 +15,7 @@ Is like the field textarea, but for the editing is used MCE Editor WYSIWYG (http
       "width": 8,
       "defaultValue": "<p>Text</p>",
       "expandable": true,
-      "list": true,
+      "disabled": false,
       "multiname": "new_value",
       "tinymce-init": {
         "menubar": false,
@@ -53,8 +53,7 @@ Is like the field textarea, but for the editing is used MCE Editor WYSIWYG (http
 the first level. For fields invested in related entities (which are within the fields of type array) filters are not.
 They will be created. The default adds all fields except those in which the value is set to false.
 * **readonly**: specifies the ban on editing field.
-* **list**: whether you want to display the field in the record list. Not valid for nested arrays in fields. In order to
-the table was not empty, you must specify this option to true for at least one field.
+* **disabled**: display component without any controls (only label and value).
 * **multiname**: a key that will be used to create an array in the request to the backend in the event that the field
 plural works in mode. If the key is not installed, go to the backend of the form array
 `[ 'value1', 'value2', 'value3']`. If a key is installed, for example: `multiname:" value "`, then go to the backend
