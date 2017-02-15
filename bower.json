@@ -1,7 +1,7 @@
 {
-  "name": "universal-editor.TinyMCE",
+  "name": "ue-tinymce",
   "main": [
-    "./dist/universal-editor.TinyMCE.min.js"
+    "./dist/ue-tinymce.min.js"
   ],
   "moduleType": [],
   "keywords": [

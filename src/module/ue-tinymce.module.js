@@ -3,9 +3,9 @@
     require('../index.scss');
     require('./templates.module.js');
     angular
-        .module('universalEditor.TinyMCE',
+        .module('ue-tinymce',
         [
-            'universalEditor.TinyMCE.templates',
+            'ue-tinymce.templates',
             'ui.tinymce'
         ]).config(function() {
             tinyMCE.baseURL = '/mce-files';

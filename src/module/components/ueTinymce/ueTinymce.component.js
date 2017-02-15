@@ -13,6 +13,6 @@
         controllerAs : 'vm'
     };
     angular
-        .module('universalEditor.TinyMCE')
+        .module('ue-tinymce')
         .component('ueTinymce', ueTinymce);
 })();

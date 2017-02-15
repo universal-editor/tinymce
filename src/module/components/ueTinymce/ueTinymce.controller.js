@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('universalEditor.TinyMCE')
+        .module('ue-tinymce')
         .controller('UeTinymceController', UeTinymceController);
 
-    UeTinymceController.$inject = ['$rootScope', '$scope', 'EditEntityStorage', '$controller'];
+    UeTinymceController.$inject = ['$scope', '$controller'];
 
-    function UeTinymceController($rootScope, $scope, EditEntityStorage, $controller) {
+    function UeTinymceController($scope, $controller) {
         /* jshint validthis: true */
         var vm = this,
             componentSettings,
