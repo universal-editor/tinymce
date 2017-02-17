@@ -107,7 +107,8 @@
         plugins: [
             new webpack.DefinePlugin({
                 'NODE_ENV': JSON.stringify(NODE_ENV),
-                'RUNNING_SERVER': RUNNING_SERVER
+                'RUNNING_SERVER': RUNNING_SERVER,
+                'IS_DEV': isDev
             }),
             new webpack.HotModuleReplacementPlugin(),
             new cleanWebpackPlugin([publicPath], { verbose: true })
