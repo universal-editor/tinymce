@@ -1,6 +1,6 @@
-# Extension for "Universal Editor"
+# TinyMCE component for Universal Editor
 
-Directive to "Universal Editor" editor which extends the possibility of adding a component **ue-tinymce**.
+Module for Universal Editor which extends the possibility of adding a component **ue-tinymce**.
 
 ## Installing extensions
 

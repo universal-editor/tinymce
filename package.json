@@ -9,7 +9,7 @@
     "dist": "cp -r bower_components dist/bower_components & http-server ./dist/ -a ue-tinymce.dev -c-1 -o",
     "build": "webpack -p --progress --colors"
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
