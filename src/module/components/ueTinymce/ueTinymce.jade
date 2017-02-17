@@ -36,15 +36,15 @@ div(ng-class="{'field-wrapper row':!vm.options.filter, 'filter-wrapper-field': v
                 div(data-ng-show="vm.loadedMCE")
                     textarea(data-ui-tinymce="vm.wysiwygOptions", data-ng-model="vm.fieldValue")
         .disabled-field(ng-if="vm.disabled && !vm.options.filter")
-            span(ng-bind="::vm.previewValue", data-ng-show="!vm.loadingData", ng-if = "!vm.multiple")
+            span(ng-bind="::vm.previewValue | convertHtmlToText : vm.onlyText", data-ng-show="!vm.loadingData", ng-if = "!vm.multiple")
             div(ng-repeat="value in vm.previewValue track by $index", data-ng-show="!vm.loadingData", ng-if = "vm.multiple")
-                span(ng-bind="value")
+                span(ng-bind="value | convertHtmlToText : vm.onlyText")
     //-- preview default template
     .component-preview(ng-if="!vm.templates.preview && vm.regim === 'preview'") 
         .loader-search-wrapper(data-ng-show="vm.loadingData")
             .loader-search {{'LOADING' | translate}}
-        span(ng-bind="::vm.previewValue", data-ng-show="!vm.loadingData", ng-if = "!vm.multiple")
+        span(ng-bind="::vm.previewValue | convertHtmlToText : vm.onlyText", data-ng-show="!vm.loadingData", ng-if = "!vm.multiple")
         div(ng-repeat="value in vm.previewValue track by $index", data-ng-show="!vm.loadingData", ng-if = "vm.multiple")
-            span(ng-bind="value")
+            span(ng-bind="value | convertHtmlToText : vm.onlyText")
     .field-error-wrapper(ng-if="!vm.options.filter")
         .error-item.alert.alert-danger(data-ng-repeat="err in vm.error track by $index") {{err}}

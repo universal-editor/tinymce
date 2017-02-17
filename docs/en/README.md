@@ -41,7 +41,8 @@ Is like the textarea, but for the editing is used MCE Editor WYSIWYG (https://ww
 * **type**: field type.
 * **hint**: information tooltip text that is displayed to the left of the header fields.
 * **required**: whether the field is required.
-* **defaultValue**: Default value for component.
+* **defaultValue**: default value for component.
+* **displayOnlyText**: exclude all tags while display component (for example, in table). 
 * **expandable**: if you want to ask for the additional field at the backend. If it is determined that a request for entity will be made in the format:
 
 ```

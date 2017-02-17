@@ -3,7 +3,15 @@
 
     angular
         .module('ue-tinymce')
-        .controller('UeTinymceController', UeTinymceController);
+        .controller('UeTinymceController', UeTinymceController)
+        .filter('convertHtmlToText', function() {
+            return function(item, onlyText) {
+                if (angular.isString(item)) {
+                    return onlyText ? $(item).text() : item;
+                }
+                return '';
+            };
+        });
 
     UeTinymceController.$inject = ['$scope', '$controller'];
 
@@ -18,6 +26,8 @@
             componentSettings = vm.setting.component.settings;
             baseController = $controller('FieldsController', { $scope: $scope });
             angular.extend(vm, baseController);
+
+            vm.onlyText = componentSettings.displayOnlyText === true;
 
             vm.wysiwygOptions = componentSettings['tinymce-init'] || {
                 menubar: true,
