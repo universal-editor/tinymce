@@ -19,10 +19,10 @@
   "dependencies": {
     "angular": "~1.6.x",
     "tinymce-dist": "4.3.12",
-    "angular-ui-tinymce": "~0.0.10",
-    "bootstrap-sass": "^3.3.7"
+    "angular-ui-tinymce": "~0.0.10"
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "jquery": "~2.1.4",
     "jquery-minicolors": "~2.1.7",
     "angular-minicolors": "~0.0.7",
@@ -40,7 +40,7 @@
     "angular-translate-loader-static-files": "^2.11.0",
     "bootstrap": "~3.1.1",
     "angular-bootstrap": "^2.1.4",
-    "universal-editor": "https://github.com/universal-editor/universal-editor.git#components"
+    "universal-editor": "https://github.com/universal-editor/universal-editor.git#e4d0d60903c1f9d0c61b8d2b0786950be0ff8bd3"
   },
   "resolutions": {
     "angular": "~1.6.1",
