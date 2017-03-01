@@ -1,42 +1,39 @@
-# Tinymce
+# ue-tinymce
 
-Является подобием Textarea, с тем отличием, что для редактирования в данном случае будет применен визуальный редактор MCE Editor (https://www.tinymce.com/).
+Компонент с визуальным редактором (TinyMCE)[https://www.tinymce.com/].
 
 ```json
 {
-  "name": "field_name",
-  "component": {
-    "name": "ue-tinymce",
-    "settings": {
-      "label": "Компонент tinymce",
-      "hint": "Это большое и красивое текстовое поле",
-      "required": false,
-      "readonly": false,
-      "multiple": false,
-      "width": 8,
-      "defaultValue": "<p>Текст</p>",
-      "expandable": true,
-      "disabled": false,
-      "multiname": "new_value",
-      "tinymce-init": {
-        "menubar": false,
-        "skin": "lightgray",
-        "theme": "modern",
-        "plugins": [
-          "advlist autolink lists link image charmap print hr anchor pagebreak",
-          "searchreplace wordcount visualblocks visualchars code",
-          "insertdatetime nonbreaking save table contextmenu textcolor"
-        ],
-        "toolbar1": "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
-        "toolbar2": "forecolor backcolor emoticons | link image",
-        "language": "ru"
-      }
+  "name": "ue-tinymce",
+  "settings": {
+    "label": "Компонент tinymce",
+    "hint": "Это большое и красивое текстовое поле",
+    "required": false,
+    "readonly": false,
+    "multiple": false,
+    "width": 8,
+    "defaultValue": "<p>Текст</p>",
+    "expandable": true,
+    "disabled": false,
+    "multiname": "new_value",
+    "tinymce-init": {
+      "menubar": false,
+      "skin": "lightgray",
+      "theme": "modern",
+      "plugins": [
+        "advlist autolink lists link image charmap print hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code",
+        "insertdatetime nonbreaking save table contextmenu textcolor"
+      ],
+      "toolbar1": "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
+      "toolbar2": "forecolor backcolor emoticons | link image",
+      "language": "ru"
     }
   }
 }
 ```
 
-## Параметры раздела **settings**
+## Настройки
 
 | Параметр | Тип | Описание | Обязательный параметр? | Значение по-умолчанию |
 | --- | --- | --- | --- | --- |
