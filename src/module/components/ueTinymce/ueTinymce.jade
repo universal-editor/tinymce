@@ -1,0 +1,50 @@
+div(ng-class="{'field-wrapper row':!vm.options.filter, 'filter-wrapper-field': vm.options.filter}")
+    //-- with templates
+    .component-template(
+        on-render-template,
+        ng-class="{'component-filter': vm.templates.filter && vm.regim === 'filter',\
+            'component-edit': vm.templates.edit  && vm.regim === 'edit',\
+            'component-preview': vm.templates.preview && vm.regim === 'preview'}")
+    //-- without templates
+    //-- filter or edit default template
+    .component-edit(
+        ng-if="(!vm.templates.edit && vm.regim === 'edit') || (!vm.templates.filter && vm.regim === 'filter')",
+        ng-class="{'component-filter': vm.regim === 'filter'}"
+        )
+        label.field-name-label(ng-if="!vm.options.filter && !!vm.label")
+            .field-hint(data-ng-if="!!vm.hint")
+                .hint-text(ng-bind="::vm.hint")
+            span(data-ng-class="{'editor-required': vm.required}" ng-bind="::vm.label")
+        .filter-inner-wrapper(ng-if="vm.options.filter")
+            input.form-control.input-sm(
+                type="text",
+                name="{{vm.fieldName}}",
+                data-ng-model="vm.fieldValue"
+                )
+        div(ng-if="!vm.disabled && !vm.options.filter")        
+            div.field-mce-textarea-wrapper(data-ng-if="vm.multiple", data-ng-class="vm.classComponent")
+                .item-mce-textarea-wrapper(data-ng-repeat="field_item in vm.fieldValue track by $index")
+                    .processing-status-wrapper(data-ng-hide="vm.loadedMCE")
+                        .processing-status {{'PERFORMS_ACTIONS' | translate}} 
+                    div(data-ng-show="vm.loadedMCE")
+                        .btn.btn-default.btn-sm.mce-delete-item(data-ng-click="vm.removeItem($index)", data-ng-if="!vm.readonly") x
+                        textarea(data-ui-tinymce="vm.wysiwygOptions", data-ng-model="vm.fieldValue[$index]")                        
+                .btn.btn-primary.btn-sm(data-ng-click="vm.addItem()", data-ng-if="!vm.readonly") {{'BUTTON.ADD' | translate}}
+            div.field-mce-textarea-wrapper(data-ng-if="!vm.multiple", data-ng-class="vm.classComponent")
+                .processing-status-wrapper(data-ng-hide="vm.loadedMCE")
+                    .processing-status {{'PERFORMS_ACTIONS' | translate}} 
+                div(data-ng-show="vm.loadedMCE")
+                    textarea(data-ui-tinymce="vm.wysiwygOptions", data-ng-model="vm.fieldValue")
+        .disabled-field(ng-if="vm.disabled && !vm.options.filter")
+            span(ng-bind="vm.previewValue | convertHtmlToText : vm.onlyText", data-ng-show="!vm.loadingData", ng-if = "!vm.multiple")
+            div(ng-repeat="value in vm.previewValue track by $index", data-ng-show="!vm.loadingData", ng-if = "vm.multiple")
+                span(ng-bind="value | convertHtmlToText : vm.onlyText")
+    //-- preview default template
+    .component-preview(ng-if="!vm.templates.preview && vm.regim === 'preview'") 
+        .loader-search-wrapper(data-ng-show="vm.loadingData")
+            .loader-search {{'LOADING' | translate}}
+        span(ng-bind="vm.previewValue | convertHtmlToText : vm.onlyText", data-ng-show="!vm.loadingData", ng-if = "!vm.multiple")
+        div(ng-repeat="value in vm.previewValue track by $index", data-ng-show="!vm.loadingData", ng-if = "vm.multiple")
+            span(ng-bind="value | convertHtmlToText : vm.onlyText")
+    .field-error-wrapper(ng-if="!vm.options.filter")
+        .error-item.alert.alert-danger(data-ng-repeat="err in vm.error track by $index") {{err}}

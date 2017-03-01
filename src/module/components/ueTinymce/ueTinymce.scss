@@ -1,0 +1,25 @@
+.field-wrapper-ue-tinymce {
+    & .component-edit {
+        & div {
+            & .field-mce-textarea-wrapper {
+                & .item-mce-textarea-wrapper {
+                    margin: 5px 0;
+                    & .mce-tinymce {
+                        margin-right: 30px;
+                    }
+                    & .mce-delete-item {
+                        float: right;
+                    }
+                }
+            }
+        }
+        & .disabled-field {
+          display: block;
+          margin: 0 15px;
+            & span {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    }
+}
