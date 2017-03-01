@@ -26,7 +26,6 @@
             componentSettings = vm.setting.component.settings;
             baseController = $controller('FieldsController', { $scope: $scope });
             angular.extend(vm, baseController);
-            debugger;
 
             vm.onlyText = componentSettings.displayOnlyText === true;
 
@@ -53,7 +52,6 @@
             vm.listeners.push($scope.$on('editor:entity_loaded', function(e, data) {
                 $scope.onLoadDataHandler(e, data);
                 if (!data.$parentComponentId || data.$parentComponentId === vm.parentComponentId && !vm.options.filter) {
-                      debugger;
                     vm.equalPreviewValue();
                 }
             }));
