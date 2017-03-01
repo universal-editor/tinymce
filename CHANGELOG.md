@@ -1,9 +1,9 @@
 # Change log
 
-# 1.0
+## 1.0.0-alpha
 
-* `ue-tinymce` is developed for universal editor with component `ue-tinymce` (сompatible since version editor 1.0.0-alpha4).
+Component for Universal editor (сompatible since version editor 1.0.0-alpha4).
 
-# 0.x 
+## 0.1.0
 
 * Version of field `tinymce` for editor (not later than 1.0.0-alpha3 version).
