@@ -2,7 +2,7 @@
 
 Module for Universal Editor which extends the possibility of adding a component **ue-tinymce**.
 
-## Installing extensions
+## Installing
 
 This extension is pulled like a bower dependence. For connecting the extension required to execute
 the following commands when you located in the root directory of the project:

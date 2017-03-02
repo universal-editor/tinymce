@@ -1,11 +1,12 @@
 {
   "name": "ue-tinymce",
+  "version": "1.0.0-alpha",
   "main": [
     "./dist/ue-tinymce.min.js"
   ],
   "moduleType": [],
   "keywords": [
-    "editor"
+    "universal editor", "tinymce"
   ],
   "license": "MIT",
   "homepage": "",
