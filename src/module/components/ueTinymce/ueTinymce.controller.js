@@ -49,9 +49,9 @@
             };
             vm.addItem = addItem;
             vm.removeItem = removeItem;
-            vm.listeners.push($scope.$on('editor:entity_loaded', function(e, data) {
-                $scope.onLoadDataHandler(e, data);
-                if (!data.$parentComponentId || data.$parentComponentId === vm.parentComponentId && !vm.options.filter) {
+            vm.listeners.push($scope.$on('ue:componentDataLoaded', function(e, data) {
+                if (vm.isParentComponent(data)) {
+                    $scope.onLoadDataHandler(e, data);
                     vm.equalPreviewValue();
                 }
             }));
