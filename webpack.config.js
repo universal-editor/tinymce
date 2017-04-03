@@ -167,6 +167,11 @@
         webpackConfigTemplate.entry['../demo/bootstrapStyle'] = [path.resolve(__dirname, 'src/bootstrap_inject.js')];
     }
 
+    var chunks = [fileBuildName];
+    if(isProd) {
+        chunks.push('../demo/bootstrapStyle');
+    }
+
     if (!RUNNING_SERVER || (RUNNING_SERVER && !isProd)) {
         webpackConfigTemplate.plugins.push(new InjectHtmlPlugin({
             filename: path.resolve(__dirname, 'demo/index.html'),
@@ -175,7 +180,7 @@
             processor: function(file) {
                 return file.replace('../demo/', '');
             },
-            chunks: [fileBuildName, '../demo/bootstrapStyle']
+            chunks: chunks
         }));
         webpackConfigTemplate.plugins.push(new cleanWebpackPlugin([publicPath], { verbose: true }));
     }

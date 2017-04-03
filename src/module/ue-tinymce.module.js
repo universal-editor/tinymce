@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     require('../index.scss');
-    if(IS_DEV) {
+    if (IS_DEV) {
         require('../bootstrap_inject.scss');
     }
     require('./templates.module.js');

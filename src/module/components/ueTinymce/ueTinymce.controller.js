@@ -13,10 +13,9 @@
             };
         });
 
-    UeTinymceController.$inject = ['$scope', '$controller'];
-
     function UeTinymceController($scope, $controller) {
         /* jshint validthis: true */
+        'ngInject';
         var vm = this,
             componentSettings,
             baseController;
