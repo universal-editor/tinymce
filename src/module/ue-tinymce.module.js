@@ -11,7 +11,7 @@
             'ue-tinymce.templates',
             'ui.tinymce'
         ]).config(function() {
-            tinyMCE.baseURL = '/mce-files';
+            tinyMCE.baseURL = '/tinymce-dist';
         });
     var context = require.context('./components', true, /\.js$/);
     context.keys().forEach(context);

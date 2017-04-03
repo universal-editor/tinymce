@@ -21,21 +21,3 @@
     }
 })();
 
-angular
-    .module('demoApp')
-    .run(demoAppRun);
-
-demoAppRun.$inject = ['$rootScope'];
-
-function demoAppRun($rootScope) {
-    var itemsSelector = document.querySelectorAll('.nav.nav-tabs li');
-    $rootScope.$on('$stateChangeSuccess', function (event, toState) {
-        var stateParamEntityId = toState.name;
-        angular.forEach(itemsSelector, function (item) {
-            $(item).removeClass('active');
-            if (~stateParamEntityId.indexOf($(item).find('a')[0].hash.split('/')[1])) {
-                $(item).addClass('active');
-            }
-        });
-    });
-}
