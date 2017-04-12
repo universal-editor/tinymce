@@ -13,7 +13,7 @@
             };
         });
 
-    function UeTinymceController($scope, $controller) {
+    function UeTinymceController($scope, $controller, $element) {
         /* jshint validthis: true */
         'ngInject';
         var vm = this,
@@ -23,7 +23,7 @@
         vm.$onInit = function() {
             vm.loadedMCE = false;
             componentSettings = vm.setting.component.settings;
-            baseController = $controller('FieldsController', { $scope: $scope });
+            baseController = $controller('FieldsController', { $scope: $scope, $element: $element });
             angular.extend(vm, baseController);
 
             vm.onlyText = componentSettings.displayOnlyText === true;
