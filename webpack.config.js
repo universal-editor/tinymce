@@ -8,7 +8,8 @@
         cleanWebpackPlugin = require('clean-webpack-plugin'),
         ngAnnotatePlugin = require('ng-annotate-webpack-plugin'),
         WebpackNotifierPlugin = require('webpack-notifier'),
-        InjectHtmlPlugin = require('inject-html-webpack-plugin');
+        InjectHtmlPlugin = require('inject-html-webpack-plugin'),
+        CopyWebpackPlugin = require('copy-webpack-plugin');
 
     var isTrySetHost = false,
         defaultlocalHost = '127.0.0.1',
@@ -130,6 +131,7 @@
                 'RUNNING_SERVER': RUNNING_SERVER
             }),
             new webpack.HotModuleReplacementPlugin(),
+            new CopyWebpackPlugin([{ from: './src/module/langs', to: 'tinymce-dist/langs' }]),
             new ngAnnotatePlugin({
                 add: true
             }),

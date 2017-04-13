@@ -11,10 +11,7 @@
             'ue-tinymce.templates',
             'ui.tinymce'
         ]).config(function() {
-            tinyMCE.baseURL = '/tinymce-dist'; 
-            if(tinyMCE.language === 'ru') {
-                require('./ru.js');
-            }
+            tinyMCE.baseURL = '/tinymce-dist';
         });
     var context = require.context('./components', true, /\.js$/);
     context.keys().forEach(context);

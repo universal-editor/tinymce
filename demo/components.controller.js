@@ -26,7 +26,13 @@
                                     multiname: 'new_value',
                                     multiple: false,
                                     width: 8,
-                                    defaultValue: '<p>Текст</p>'
+                                    defaultValue: '<p>Текст</p>',
+                                    'tinymce-init': {
+                                        menubar: true,
+                                        plugins: 'advlist autolink link lists charmap',
+                                        skin: 'lightgray',
+                                        theme: 'modern'
+                                    }
                                 }
                             }
                         },
