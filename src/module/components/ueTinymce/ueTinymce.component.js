@@ -6,9 +6,10 @@
             setting: '<',
             options: '='
         },
-        template : ['$templateCache', function ($templateCache) {
+        template : function ($templateCache) {
+            'ngInject';
             return $templateCache.get('module/components/ueTinymce/ueTinymce.html');
-        }],
+        },
         controller: 'UeTinymceController',
         controllerAs : 'vm'
     };

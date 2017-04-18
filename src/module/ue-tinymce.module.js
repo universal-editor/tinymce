@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     require('../index.scss');
-    if(IS_DEV) {
+    if (IS_DEV) {
         require('../bootstrap_inject.scss');
     }
     require('./templates.module.js');
@@ -11,7 +11,7 @@
             'ue-tinymce.templates',
             'ui.tinymce'
         ]).config(function() {
-            tinyMCE.baseURL = '/mce-files';
+            tinyMCE.baseURL = '/tinymce-dist';
         });
     var context = require.context('./components', true, /\.js$/);
     context.keys().forEach(context);

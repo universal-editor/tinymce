@@ -13,10 +13,9 @@
             };
         });
 
-    UeTinymceController.$inject = ['$scope', '$controller'];
-
-    function UeTinymceController($scope, $controller) {
+    function UeTinymceController($scope, $controller, $element) {
         /* jshint validthis: true */
+        'ngInject';
         var vm = this,
             componentSettings,
             baseController;
@@ -24,7 +23,7 @@
         vm.$onInit = function() {
             vm.loadedMCE = false;
             componentSettings = vm.setting.component.settings;
-            baseController = $controller('FieldsController', { $scope: $scope });
+            baseController = $controller('FieldsController', { $scope: $scope, $element: $element });
             angular.extend(vm, baseController);
 
             vm.onlyText = componentSettings.displayOnlyText === true;
@@ -49,9 +48,9 @@
             };
             vm.addItem = addItem;
             vm.removeItem = removeItem;
-            vm.listeners.push($scope.$on('editor:entity_loaded', function(e, data) {
-                $scope.onLoadDataHandler(e, data);
-                if (!data.$parentComponentId || data.$parentComponentId === vm.parentComponentId && !vm.options.filter) {
+            vm.listeners.push($scope.$on('ue:componentDataLoaded', function(e, data) {
+                if (vm.isParentComponent(data)) {
+                    $scope.onLoadDataHandler(e, data);
                     vm.equalPreviewValue();
                 }
             }));
