@@ -6,7 +6,8 @@
   ],
   "moduleType": [],
   "keywords": [
-    "universal editor", "tinymce"
+    "universal editor",
+    "tinymce"
   ],
   "license": "MIT",
   "homepage": "",
@@ -25,7 +26,6 @@
     "jquery-minicolors": "~2.1.7",
     "angular-minicolors": "~0.0.7",
     "angular-moment": "~0.10.3",
-    "angular-datepicker": "~2.0.3",
     "moment": "^2.17.1",
     "checklist-model": "~0.6.0",
     "ng-file-upload-shim": "~10.0.2",
@@ -38,7 +38,9 @@
     "angular-translate-loader-static-files": "^2.11.0",
     "bootstrap": "~3.1.1",
     "angular-bootstrap": "^2.1.4",
-    "universal-editor": "^1.0.0-alpha5"
+    "universal-editor": "acffbe859f1792bd5533f01fbcda1aa6b4d50425",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "angular-drag-and-drop-lists": "^2.1.0"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7"
