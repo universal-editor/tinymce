@@ -4,13 +4,11 @@
   "main": [
     "./dist/ue-tinymce.min.js"
   ],
-  "moduleType": [],
   "keywords": [
     "universal editor",
     "tinymce"
   ],
   "license": "MIT",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
