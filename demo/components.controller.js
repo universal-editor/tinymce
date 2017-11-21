@@ -28,10 +28,18 @@
                                     width: 8,
                                     defaultValue: '<p>Текст</p>',
                                     'tinymce-init': {
-                                        menubar: true,
-                                        plugins: 'advlist autolink link lists charmap',
+                                        height: '300',
+                                        menubar: false,
                                         skin: 'lightgray',
-                                        theme: 'modern'
+                                        theme: 'modern',
+                                        language: 'ru',
+                                        plugins: [
+                                          'advlist autolink lists link image charmap print hr anchor pagebreak',
+                                          'searchreplace wordcount visualblocks visualchars code',
+                                          'insertdatetime nonbreaking save table contextmenu textcolor image link media'
+                                        ],
+                                        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                                        toolbar2: 'forecolor backcolor emoticons | link '
                                     }
                                 }
                             }
